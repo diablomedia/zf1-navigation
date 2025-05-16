@@ -991,7 +991,7 @@ abstract class Zend_Navigation_Page extends Zend_Navigation_Container
      *                                            no parent.
      * @return Zend_Navigation_Page               fluent interface, returns self
      */
-    public function setParent(Zend_Navigation_Container $parent = null)
+    public function setParent(?Zend_Navigation_Container $parent = null)
     {
         if ($parent === $this) {
             throw new Zend_Navigation_Exception(
