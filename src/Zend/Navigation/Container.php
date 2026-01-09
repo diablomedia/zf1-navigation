@@ -514,8 +514,8 @@ abstract class Zend_Navigation_Container implements RecursiveIterator, Countable
         current($this->_index);
         $hash = key($this->_index);
 
-        if (isset($this->_pages[$hash])) {
-            return $this->_pages[$hash];
+        if (isset($this->_pages[(string) $hash])) {
+            return $this->_pages[(string) $hash];
         } else {
             throw new Zend_Navigation_Exception(
                 'Corruption detected in container; ' .
@@ -605,8 +605,8 @@ abstract class Zend_Navigation_Container implements RecursiveIterator, Countable
     {
         $hash = key($this->_index);
 
-        if (isset($this->_pages[$hash])) {
-            return $this->_pages[$hash];
+        if (isset($this->_pages[(string) $hash])) {
+            return $this->_pages[(string) $hash];
         }
 
         return null;
